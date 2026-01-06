@@ -1,0 +1,38 @@
+<!--pages/index/index.wxml-->
+<view class="box">
+    <view class="box_iput">
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input1}}"  id="Input1" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input2}}"  id="Input2" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input3}}"  id="Input3" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input4}}"  id="Input4" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input5}}"  id="Input5" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input6}}"  id="Input6" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input7}}" placeholder="年" id="Input7" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input8}}" placeholder="年" id="Input8" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input9}}" placeholder="年" id="Input9" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input10}}" placeholder="年" id="Input10" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input11}}" placeholder="月" id="Input11" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input12}}" placeholder="月" id="Input12" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input13}}" placeholder="日" id="Input13" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input14}}" placeholder="日" id="Input14" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input15}}" id="Input15" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input16}}" id="Input16" bindinput="InputData" />
+        <input class="input" type="number" maxlength="1" value="{{FormData.Input17}}" id="Input17" bindinput="InputData" />
+        <input class="input" maxlength="1" value="{{FormData.Input18}}" id="Input18" bindinput="InputData" />
+    </view>
+
+    <view class="box_buto">
+        <button type="primary" bind:tap="verify_buto">核验</button>
+    </view>
+
+    <view class="box_buto">
+        <button type="warn" bind:tap="cz_buto">重置</button>
+    </view>
+
+    <view class="box_txt" wx:if="{{verify&&isverify}}">
+        <view class="show_text1">有效身份证</view>
+    </view>
+    <view class="box_txt" wx:if="{{!verify&&isverify}}">
+        <view class="show_text2">无效身份证</view>
+    </view>
+</view>
